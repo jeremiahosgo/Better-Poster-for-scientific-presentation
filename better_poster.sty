@@ -49,13 +49,18 @@
     \vspace*{-1cm} % get rid of random white space
     \noindent\makebox[\linewidth][c]{%
       \colorbox{\postertype}{%
-        \parbox[t][0.3\paperheight][c]{\paperwidth}{%
+        \parbox[t][0.2\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}{\textwidth}
           \textcolor{white}
-            {\fontsize{40}{50} \selectfont
+            { \selectfont
             \begin{center}
-                 \nohyphens{#1}
+            	{\fontsize{40}{50}
+                 \nohyphens{#1}}\\
+             \vspace{0.7cm}
+                 \Large{kandidát č.}\Huge{14}\\
+                 	 \vspace{0.7cm} \Large{do Studentské Komory
+                 Akademického Senátu FSV ČVUT}
             \end{center}
             }
           \end{minipage}%
@@ -72,17 +77,19 @@
         \parbox[c][0.14\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}[c][0.14\paperheight][c]{0.15\textwidth}
-                \includegraphics[height=0.11\paperheight, left]{#2}
+                \includegraphics[height=0.10\paperheight, left]{#1}
           \end{minipage}
-          \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
+      \hspace{3cm}
+          \begin{minipage}[c][0.24\paperheight][c]{0.4\textwidth}
               \textcolor{white}
-                {\large{
-                   $\leftarrow$ Download the paper }
-                }  
+                {\large{\centering
+                   Chci pomáhat v rozvoji naší fakulty }
+                }  % v prospěch studentů i akademických pracovníků
           \end{minipage}
           \hfill
           \begin{minipage}[c][0.14\paperheight][c]{0.2\textwidth}
-            \includegraphics[height=0.11\paperheight, left]{#1}
+          	\vspace{-1cm}
+            \includegraphics[height=0.11\paperheight, left]{#2}
           \end{minipage}
         }%
       }%
@@ -94,11 +101,12 @@
     \vspace*{\fill}
     \noindent\makebox[\linewidth][c]{%
       \colorbox{\postertype}{%
-        \parbox[c][0.14\paperheight][c]{\paperwidth}{%
+        \parbox[c][0.15\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
             % your logo here
-            \includegraphics[height=0.11\paperheight, left]{#1}
+            %\vspace{-2.5cm}
+            \includegraphics[height=0.15\paperheight, left]{#1}
             \end{minipage}
           \hfill
           \begin{minipage}[c][0.14\paperheight][c]{0.4\textwidth}
@@ -109,8 +117,8 @@
           %      }
                 \end{flushright}
           \end{minipage}
-          \begin{minipage}[c][0.14\paperheight][c]{0.2\textwidth}
-                \includegraphics[height=0.11\paperheight, left]{#2}
+          \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
+                \includegraphics[height=0.15\paperheight, left]{#2}
           \end{minipage}
         }%
       }%
@@ -121,7 +129,7 @@
 % makes main column
 \newcommand{\makemain}[1]{
     \noindent
-    \parbox[t][0.55\paperheight][t]{0.65\linewidth}{%
+    \parbox[t][0.65\paperheight][t]{0.60\linewidth}{%
     
         {\let\newpage\relax\maketitle}
         #1
@@ -132,13 +140,13 @@
 % makes additional figures column
 \newcommand{\makeextracolumn}[1]{
     \hfill\begin{tikzpicture}[overlay]
-    \draw[\postertype, very thick] (0,0.01\paperheight) -- (0,-0.56\paperheight);
+    \draw[\postertype, very thick] (0,0.01\paperheight) -- (0,-0.80\paperheight);
     \end{tikzpicture}
     \hfill
-    \parbox[t][0.55\paperheight][t]{0.3\linewidth}{
-        \section*{Martin Ladecký}
+    \parbox[t][0.45\paperheight][t]{0.36\linewidth}{
+        \section*{}
         
-        {\scriptsize
+        {
         #1
         }
     }
